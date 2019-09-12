@@ -7,6 +7,7 @@
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
+    "build:check": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare" : "npm run build",
@@ -22,13 +23,16 @@
   "files": [
     "lib/**/*"
   ],
-  "keywords": [],
-  "author": "",
+  "keywords": ["currency", "parser", "money"],
+  "author": "@joeblas",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/joeblas/money-parse/issues"
   },
   "homepage": "https://github.com/joeblas/money-parse#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.18",
     "jest": "^24.9.0",
